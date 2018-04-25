@@ -1,0 +1,25 @@
+{
+  "name": "tasyncexpress",
+  "version": "1.0.1",
+  "description": "monkeypatch express/router/layer so you can write async handler",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TobiasNickel/tAsyncExpress.git"
+  },
+  "keywords": [
+    "express",
+    "async",
+    "promise",
+    "handler"
+  ],
+  "author": "Tobias Nickel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TobiasNickel/tAsyncExpress/issues"
+  },
+  "homepage": "https://github.com/TobiasNickel/tAsyncExpress#readme"
+}
