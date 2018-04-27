@@ -10,7 +10,13 @@ require('express/lib/router/layer').prototype.handle_request = function handle(r
         if (typeof (promise) === 'object' && typeof (promise.catch) === 'function' && typeof (promise.then) === 'function') {
             promise.then((data) => {
                 try {
-                    if (data !== undefined) res.json(data);
+                    if (data !== undefined){
+                        if(typeof(data) == 'string'){
+                            res.send(data);
+                        }else if(typeof(data)==='object'){
+                            res.json(data);
+                        }
+                    } 
                 } catch (err) {/*ignore error*/ }
             });
             promise.catch(next);
