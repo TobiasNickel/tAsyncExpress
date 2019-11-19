@@ -11,9 +11,9 @@ require('express/lib/router/layer').prototype.handle_request = function handle(r
             promise.then((data) => {
                 try {
                     if (data !== undefined){
-                        if(typeof(data) == 'string'){
+                        if(typeof(data) == 'string' || Buffer.isBuffer(data)){
                             res.send(data);
-                        }else if(typeof(data)==='object'){
+                        } else {
                             res.json(data);
                         }
                     } 
